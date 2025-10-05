@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <div class="background-ring ring-one"></div>
+      <div class="background-ring ring-two"></div>
+      <section class="calculator theme-dark" aria-label="Calculator">
+        <header class="calculator__header">
+          <button class="icon-button" aria-label="Toggle microphone">
+            <span class="icon icon--mic"></span>
+          </button>
+          <button class="icon-button theme-toggle" aria-label="Promijeni temu">
+            <span class="icon icon--sun"></span>
+          </button>
+        </header>
+        <div class="calculator__display">
+          <div class="calculator__expression" aria-live="polite"></div>
+          <div class="calculator__result" aria-live="polite">0</div>
+        </div>
+        <div class="calculator__grid" role="grid">
+          <button class="btn btn--action" data-action="clear" role="gridcell">C</button>
+          <button class="btn btn--action" data-action="sign" role="gridcell">±</button>
+          <button class="btn btn--action" data-action="percent" role="gridcell">%</button>
+          <button class="btn btn--operator" data-action="operator" data-value="/" role="gridcell">÷</button>
+
+          <button class="btn" data-value="7" role="gridcell">7</button>
+          <button class="btn" data-value="8" role="gridcell">8</button>
+          <button class="btn" data-value="9" role="gridcell">9</button>
+          <button class="btn btn--operator" data-action="operator" data-value="*" role="gridcell">×</button>
+
+          <button class="btn" data-value="4" role="gridcell">4</button>
+          <button class="btn" data-value="5" role="gridcell">5</button>
+          <button class="btn" data-value="6" role="gridcell">6</button>
+          <button class="btn btn--operator" data-action="operator" data-value="-" role="gridcell">−</button>
+
+          <button class="btn" data-value="1" role="gridcell">1</button>
+          <button class="btn" data-value="2" role="gridcell">2</button>
+          <button class="btn" data-value="3" role="gridcell">3</button>
+          <button class="btn btn--operator" data-action="operator" data-value="+" role="gridcell">+</button>
+
+          <button class="btn btn--wide" data-value="0" role="gridcell">0</button>
+          <button class="btn" data-value="." role="gridcell">.</button>
+          <button class="btn btn--operator" data-action="equals" role="gridcell">=</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
